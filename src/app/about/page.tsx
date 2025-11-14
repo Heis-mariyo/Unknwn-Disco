@@ -1,52 +1,6 @@
 import React from "react";
 import Link from "next/link"; // <-- This is what links the pages!
 
-// --- 1. HEADER COMPONENT (Updated for About Page) ---
-const Header = () => {
-  const navItems = [
-    { name: "HOME", path: "/" },
-    { name: "ABOUT", path: "/about" },
-    { name: "SERVICES", path: "/services" },
-    { name: "CREATORS", path: "/creators" },
-    { name: "JOIN", path: "/join" },
-    { name: "CONTACT", path: "/contact" },
-  ];
-
-  return (
-    <header className="flex justify-between items-center py-6 px-[6%]">
-      <Link href="/home">
-        <img 
-        src="/unknwn-disco-logo.png" 
-        alt="UNKNWN DISCO Logo" 
-        className="h-12 cursor-pointer"
-        />
-      </Link>
-
-      <nav>
-        <ul className="flex gap-8">
-          {navItems.map((item) => (
-            <li key={item.name} className="relative group">
-              <Link
-                href={item.path}
-                className={`text-sm font-bold transition-colors duration-300 ${
-                  item.name === "ABOUT"
-                    ? "text-white" // Active state color
-                    : "text-un-text-gray hover:text-white"
-                }`}
-              >
-                {item.name}
-              </Link>
-              {/* Active underline indicator */}
-              {item.name === "ABOUT" && (
-                <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-un-purple to-un-teal"></span>
-              )}
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
-  );
-};
 
 // --- 2. HERO SECTION (Text Only) ---
 const AboutHero = () => {
@@ -59,11 +13,11 @@ const AboutHero = () => {
           TO
         </span>
         <br />
-        <span className="bg-gradient-to-r from-un-purple to-un-blue bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-un-purple to-un-blue bg-clip-text text-transparent animate-gradientDrift animate-neonShimmer">
           TURN THE
         </span>
         <br />
-        <span className="bg-gradient-to-r from-un-blue to-un-teal bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-un-blue to-un-teal bg-clip-text text-transparent animate-gradientDrift animate-neonShimmer">
           UNKNOWN INTO
         </span>
         <br />
@@ -232,80 +186,18 @@ const OurValues = () => {
   );
 };
 
-// --- 7. FOOTER (Same as Homepage) ---
-const Footer = () => {
-  const navLinks = ["Home", "About", "Services", "Creators", "Join", "Contact"];
-
-  return (
-    <footer className="px-[6%] pt-16 pb-8 text-un-text-gray border-t border-un-border mt-10">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-        <div>
-          <div className="text-xl font-bold tracking-wide mb-4 text-white">
-            UNKNWN DISCO
-          </div>
-          <p>Visibility. Energy. Culture.</p>
-        </div>
-        <div>
-          <h4 className="font-bold mb-4 text-white">NAVIGATE</h4>
-          <ul className="space-y-2">
-            {navLinks.map((link) => (
-              <li key={link}>
-                <a href="#" className="hover:text-white transition-colors">
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-4 text-white">CONNECT</h4>
-          <div className="flex gap-4">
-            {/* Icons would go here */}
-            <div className="w-10 h-10 rounded-full border border-un-border-ghost flex items-center justify-center">
-              X
-            </div>
-            <div className="w-10 h-10 rounded-full border border-un-border-ghost flex items-center justify-center">
-              IG
-            </div>
-            <div className="w-10 h-10 rounded-full border border-un-border-ghost flex items-center justify-center">
-              YT
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="border-t border-un-border pt-8 text-center text-sm">
-        © {new Date().getFullYear()} UNKNWN DISCO. All rights reserved.
-      </div>
-    </footer>
-  );
-};
-
-// --- 8. FLOATING BUTTONS ---
-const FloatingButtons = () => {
-  return (
-    <>
-      <a
-        href="#top"
-        className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-un-purple flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#b373ff]"
-      >
-        ↑
-      </a>
-    </>
-  );
-};
 
 // --- MAIN PAGE COMPONENT ---
 export default function AboutPage() {
   return (
     <div id="top" className="bg-un-bg min-h-screen">
-      <Header />
+      {/* The layout.tsx file adds the Header, Footer, 
+          and Buttons for us now! */}
       <AboutHero />
       <OurStory />
       <OurMission />
       <TheName />
       <OurValues />
-      <Footer />
-      <FloatingButtons />
     </div>
-  );
+  )
 }

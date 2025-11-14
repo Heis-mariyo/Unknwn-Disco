@@ -42,11 +42,29 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        gradientDrift: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+        
+        // 1b & 5a. Neon Glow Pulse / Shimmer
+        neonShimmer: {
+          '0%, 100%': { 
+            filter: 'drop-shadow(0 0 4px rgba(194, 143, 255, 0.3))' 
+          },
+          '50%': { 
+            filter: 'drop-shadow(0 0 8px rgba(194, 143, 255, 0.5))' 
+          },
+        },
       },
       animation: {
         fadeInUp: "fadeInUp 0.6s ease-out forwards",
         blink: "blink 1.2s infinite ease-in-out",
         marquee: "marquee 40s linear infinite",
+        gradientDrift: 'gradientDrift 8s ease infinite',
+        // 1b & 5a. Neon Glow Pulse / Shimmer
+        neonShimmer: 'neonShimmer 7s ease-in-out infinite',
       },
     },
   },

@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+// Import our new shared components
+import { Header, FloatingButtons } from './components/Header' 
+import { Footer } from './components/Footer'
+// Import the component you just made
+
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -10,7 +15,6 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'UNKNWN DISCO',
-  // The error was happening here because the text was missing:
   description: 'We build visibility for the unseen.',
 }
 
@@ -22,7 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-inter bg-un-bg text-white`}>
-        {children}
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Footer />
+        <FloatingButtons />
       </body>
     </html>
   )

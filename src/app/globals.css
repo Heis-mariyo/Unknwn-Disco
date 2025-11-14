@@ -22,3 +22,9 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ... (your existing @tailwind rules) */
+
+.gradient-drift {
+  /* This makes the background 2x wide so it can move */
+  background-size: 200% auto;
+}
