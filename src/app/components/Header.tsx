@@ -56,12 +56,7 @@ export function Header() {
       
       {/* --- THIS IS THE NEW TEXT LOGO --- */}
       <Link href="/">
-        <div className="
-          text-xl font-bold tracking-wide cursor-pointer
-          text-white
-          transition-all duration-200 ease-out
-          hover:drop-shadow-[0_0_8px_rgba(160,74,255,0.7)]
-        ">
+        <div className="text-xl font-bold tracking-wide cursor-pointer text-white transition-all duration-200 ease-out hover:drop-shadow-[0_0_8px_rgba(160,74,255,0.7)]">
           UNKNWN DISCO
         </div>
       </Link>

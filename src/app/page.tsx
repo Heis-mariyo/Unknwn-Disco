@@ -20,18 +20,18 @@ const Hero = () => {
         build global presence.
       </p>
       <div className="flex gap-5 mb-8">
-        <a
-          href="#"
-          className="px-7 py-3.5 text-sm font-bold text-white rounded-full bg-gradient-to-r from-un-purple to-un-blue transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-un-purple/20"
+        <Link
+          href="./join"
+          className="px-7 py-3.5 text-sm font-bold rounded-full shadow-md bg-transparent border-2 transition-all duration-300 text-un-purple border-un-purple hover:text-un-purple-light hover:bg-gradient-to-r from-un-purple to-un-blue hover:scale-[1.03] hover:shadow-xl hover:shadow-un-purple/10"
         >
           WORK WITH US
-        </a>
-        <a
-          href="#"
-          className="px-7 py-3.5 text-sm font-bold text-white rounded-full bg-transparent border-2 border-un-border-ghost transition-all duration-300 hover:border-white hover:bg-white/5"
+        </Link>
+        <Link
+          href="./creators"
+          className="px-7 py-3.5 text-sm font-bold rounded-full shadow-md bg-transparent border-2 transition-all duration-300 text-un-purple border-un-purple hover:text-un-purple-light hover:bg-gradient-to-r from-un-purple to-un-blue hover:scale-[1.03] hover:shadow-xl hover:shadow-un-purple/10"
         >
           DISCOVER CREATORS
-        </a>
+        </Link>
       </div>
       <div className="w-5 h-1 bg-white rounded-full animate-blink"></div>
     </main>
@@ -75,10 +75,10 @@ const WorkWith = () => {
         {cards.map((card, index) => (
           <div
             key={card.title}
-            className="bg-un-bg-card p-8 rounded-2xl border border-un-border text-left transition-all duration-300 hover:-translate-y-1 hover:border-un-purple hover:shadow-xl hover:shadow-un-purple/10 opacity-0 animate-fadeInUp"
+            className="bg-un-bg-card p-8 rounded-2xl border border-un-border text-left transition-all duration-300 hover:-translate-y-1 hover:border-un-purple hover:shadow-2xl hover:shadow-un-purple/10  hover:text-un-purple-light hover:scale-[1.03] opacity-0 animate-fadeInUp"
             style={{ animationDelay: `${(index + 1) * 0.1}s` }}
           >
-            <div className="w-16 h-16 rounded-full bg-un-purple-bg border border-un-purple-border flex items-center justify-center mb-6">
+            <div className="w-16 h-16 rounded-full bg-un-purple-bg border border-un-purple-border flex items-center justify-center mb-6 hover:animate-blink">
               {card.icon}
             </div>
             <h3 className="text-xl font-bold mb-2.5">{card.title}</h3>
@@ -118,7 +118,7 @@ const WhatWeDo = () => {
         {services.map((service, index) => (
           <div
             key={service.title}
-            className="p-1 rounded-2xl bg-gradient-to-r from-un-blue to-un-purple transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-un-purple/15 opacity-0 animate-fadeInUp"
+            className="p-1 rounded-2xl bg-gradient-to-r from-un-blue to-un-purple transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-un-purple/15 opacity-0 animate-fadeInUp hover:animate-fadeInUp"
             style={{ animationDelay: `${(index + 1) * 0.1}s` }}
           >
             <div className="bg-un-bg-card p-8 rounded-[14px] text-left h-full">

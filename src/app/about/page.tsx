@@ -56,7 +56,7 @@ const OurStory = () => {
         </p>
         <p>
           From underground musicians to emerging visual artists, from poets to
-          performers — we transform creative passion into cultural impact.
+          performers...we transform creative passion into cultural impact.
         </p>
       </div>
 
