@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 // Import our new shared components
-import { Header, FloatingButtons } from './components/Header' 
-import { Footer } from './components/Footer'
+import { Header, FloatingButtons } from '../components/Header' 
+import { Footer } from '../components/Footer'
 // Import the component you just made
 
 

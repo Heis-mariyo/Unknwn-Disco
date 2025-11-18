@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import TextScramble from './TextScramble';
+import TextScramble from './animatons/TextScramble';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 

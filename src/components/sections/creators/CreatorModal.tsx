@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 // We will export the 'Creator' type from your page.tsx file
-import { Creator } from '../page';
+import { Creator } from '../creators/AllCreators';
 
 interface CreatorModalProps {
   creator: Creator;
